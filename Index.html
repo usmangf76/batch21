@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Islamabad Outskirts</title>
+  <style>
+    :root {
+      --green: #0b6b3a;
+      --dark: #094e2a;
+      --bg: #f6f7fb;
+      --text: #333;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--green);
+      color: #fff;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    nav {
+      background: var(--dark);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover { background: rgba(255,255,255,0.12); }
+
+    section {
+      padding: 24px 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2 { text-align: center; margin: 8px 0 24px; }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+    .card h3 { color: var(--green); margin: 12px 12px 6px; }
+    .card p { margin: 0 12px 14px; font-size: 14px; }
+
+    /* Gallery Slider */
+    .gallery {
+      position: relative;
+      max-width: 1100px;
+      margin: 12px auto 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .gallery-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      padding: 0 8px;
+    }
+    .btn {
+      pointer-events: auto;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .btn:hover { background: rgba(0,0,0,0.75); }
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      background: rgba(0,0,0,0.35);
+      padding: 6px 10px;
+      border-radius: 20px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
+    .dot.active { background: #fff; }
+
+    footer {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 18px 16px;
+      margin-top: 24px;
+    }
+
+    /* Improve scrolling to anchors */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="images/logo.png" alt="Tourism Logo" class="logo">
+      <div class="header-text">
+        <h1>Step Beyond the City : Explore Islamabad’s Outskirts</h1>
+        <p>Discover nature, history, and adventure around Islamabad</p>
+      </div>
+    </div>
+</header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#nature">Nature</a>
+    <a href="#history">History</a>
+    <a href="#adventure">Adventure</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>Introduction</h2>
+
+      <article class="about">
+        <h4>
+	<p style="text-align: justify;">
+	Islamabad is renowned for its serene beauty, characterized by lush greenery, planned infrastructure with wide roads, and a stunning backdrop of the Margalla Hills, featuring iconic spots like Faisal Mosque, Rawal Lake, and Shakarparian Hills, making it a clean, green, and tranquil capital celebrated for its natural charm and cultural sites. Islamabad is surrounded by many tourist spots. One can explore the beauty of nature by visiting places located 45 minutes to two hours away.</p>
+	</h4>
+      </article>
+
+  </section>
+
+  <!-- Nature -->
+  <section id="nature">
+    <h2>Nature spots</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/margalla.jpg" alt="Margalla Hills" loading="lazy" />
+        <h3>Margalla Hills</h3>
+        <p>Hiking trails, wildlife, and sweeping views of Islamabad.</p>
+      </article>
+      <article class="card">
+        <img src="images/khanpur.jpg" alt="Khanpur Dam" loading="lazy" />
+        <h3>Khanpur Dam</h3>
+        <p>Boating, jet skiing, and picnic spots by the turquoise water.</p>
+      </article>
+      <article class="card">
+        <img src="images/murree.jpg" alt="Murree Hills" loading="lazy" />
+        <h3>Murree Hills</h3>
+        <p>Cool climate, pine forests, and the famed Queen of Hills.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section id="history">
+    <h2>Historical sites</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/taxila.jpg" alt="Taxila Museum and ruins" loading="lazy" />
+        <h3>Taxila</h3>
+        <p>Ancient Buddhist ruins and a museum rich with Gandharan heritage.</p>
+      </article>
+      <article class="card">
+        <img src="images/rohtas.jpg" alt="Rohtas Fort ramparts" loading="lazy" />
+        <h3>Rohtas Fort</h3>
+        <p>UNESCO-listed 16th-century fort with imposing stone walls.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Adventure -->
+  <section id="adventure">
+    <h2>Adventure spots</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="images/nathia.jpg" alt="Nathia Gali trails" loading="lazy" />
+        <h3>Nathia Gali</h3>
+        <p>Lush trails, mountain air, and scenic viewpoints.</p>
+      </article>
+      <article class="card">
+        <img src="images/pir-chinasi.jpg" alt="Pir Chinasi viewpoint" loading="lazy" />
+        <h3>Pir Chinasi</h3>
+        <p>High-altitude ridge with panoramic views of Muzaffarabad valley.</p>
+      </article>
+      <article class="card">
+        <img src="images/rawal-lake.jpg" alt="Rawal Lake sunset" loading="lazy" />
+        <h3>Rawal Lake</h3>
+        <p>Boating, fishing, and serene sunsets near the city.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Photo gallery</h2>
+    <div class="gallery" aria-label="Image carousel">
+      <div class="track" id="track">
+        <div class="slide"><img src="images/margalla.jpg" alt="Margalla Hills" /></div>
+        <div class="slide"><img src="images/khanpur.jpg" alt="Khanpur Dam" /></div>
+        <div class="slide"><img src="images/murree.jpg" alt="Murree Hills" /></div>
+        <div class="slide"><img src="images/taxila.jpg" alt="Taxila" /></div>
+        <div class="slide"><img src="images/rohtas.jpg" alt="Rohtas Fort" /></div>
+        <div class="slide"><img src="images/nathia.jpg" alt="Nathia Gali" /></div>
+        <div class="slide"><img src="images/pir-chinasi.jpg" alt="Pir Chinasi" /></div>
+        <div class="slide"><img src="images/rawal-lake.jpg" alt="Rawal Lake" /></div>
+      </div>
+
+      <div class="gallery-controls">
+        <button class="btn" id="prev" aria-label="Previous slide">❮</button>
+        <button class="btn" id="next" aria-label="Next slide">❯</button>
+      </div>
+
+      <div class="dots" id="dots" aria-label="Slide indicators"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Islamabad Tourism Guide<br><i>By : Usman Ghani Farooqi</i></p>
+  </footer>
+
+  <script>
+    // Responsive slider
+    const track = document.getElementById("track");
+    const slides = Array.from(track.children);
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const dotsWrap = document.getElementById("dots");
+    let index = 0;
+
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "dot" + (i === 0 ? " active" : "");
+      dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+      dot.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function update() {
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    }
+    function goTo(i) { index = i; update(); }
+    function nextSlide() { index = (index + 1) % slides.length; update(); }
+    function prevSlide() { index = (index - 1 + slides.length) % slides.length; update(); }
+
+    next.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlide);
+
+    // Auto-play (optional): uncomment to enable
+    // setInterval(nextSlide, 4000);
+
+    // Ensure correct size after images load or resize
+    window.addEventListener("resize", update);
+    window.addEventListener("load", update);
+  </script>
+</body>
+</html>
